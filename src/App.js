@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import theme from './theme/theme'
+import { ThemeProvider, StylesProvider, jssPreset } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core'
+import IndexScreen from './screens/index'
+import { create } from 'jss';
+import rtl from 'jss-rtl';
+import { getDirection} from './localization/index'
+
+// Configure JSS
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return getDirection() === 'ltr' ? (
+    <ThemeProvider theme={theme}>
+      <StylesProvider>
+        <CssBaseline />
+        <IndexScreen/>
+      </StylesProvider>
+    </ThemeProvider>
+  ):(
+    <ThemeProvider theme={theme}>
+      <StylesProvider jss={jss}>
+        <CssBaseline />
+        <IndexScreen/>
+      </StylesProvider>
+    </ThemeProvider>
+  )
 }
 
 export default App;
