@@ -33,4 +33,13 @@ function getTranslate() {
     return translates[lang]
 }
 
-export {getTranslate}
+export { getTranslate }
+
+function changeLanguage(newLang) {
+    if (newLang === lang) {
+        return
+    }
+    localStorage.setItem('lang', newLang)
+    window.location.reload()
+}
+export { changeLanguage }
