@@ -46,21 +46,23 @@ const useStyles = makeStyles((theme) => ({
 	// necessary for content to be below app bar
 	topDrawer: {
 		width: '100%',
-		padding: '0 20px',
+		padding: 20,
 		borderBottom: '1px solid #2e344e',
 		textAlign: 'center',
 	},
 	drawerPaper: {
         width: drawerWidth,
         backgroundColor: '#191d2b',
+        height: '100vh',
+        borderRight: '1px solid #2e344e'
 
 	},
     profileImage: {
-        maxWidth: '100%',
         width: 200,
         height: 200,
+        maxWidth: '100%',
         borderRadius: 100,
-        border: '6px solid #2e344e',
+        border: '5px solid #2e344e',
         verticalAlign: 'middle'
 
     },
@@ -82,22 +84,35 @@ function ResponsiveDrawer(props) {
 
 	const drawer = (
 		<div>
-            <div className={classes.topDrawer} >
-                <img src={ProfileImage} alt={translate.name} className={classes.profileImage} />
-            </div>
-			<Divider />
+			<div className={classes.topDrawer}>
+				<img
+					src={ProfileImage}
+					alt={translate.name}
+					className={classes.profileImage}
+				/>
+			</div>
+			{/* <Divider /> */}
 			<List>
-				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
+				<ListItem button>
+					<ListItemText primary={translate.home} />
+				</ListItem>
+				<ListItem button>
+					<ListItemText primary={translate.about} />
+				</ListItem>
+				<ListItem button>
+					<ListItemText primary={translate.resume} />
+				</ListItem>
+				<ListItem button>
+					<ListItemText primary={translate.portfolio} />
+				</ListItem>
+				<ListItem button>
+					<ListItemText primary={translate.contact} />
+				</ListItem>
 			</List>
-			<Divider />
-		
+            <Divider />
+            <div>
+
+            </div>
 		</div>
 	);
 
@@ -173,7 +188,7 @@ function ResponsiveDrawer(props) {
 			</main>
 		</div>
 	);
-}
+}  
 
 
 
