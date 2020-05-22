@@ -15,6 +15,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import ProfileImage from '../assets/images/profPic1.jpg'
+import {getTranslate} from '../localization/index'
+
 
 const drawerWidth = 260;
 
@@ -41,10 +44,26 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	// necessary for content to be below app bar
-	toolbar: theme.mixins.toolbar,
-	drawerPaper: {
-		width: drawerWidth,
+	topDrawer: {
+		width: '100%',
+		padding: '0 20px',
+		borderBottom: '1px solid #2e344e',
+		textAlign: 'center',
 	},
+	drawerPaper: {
+        width: drawerWidth,
+        backgroundColor: '#191d2b',
+
+	},
+    profileImage: {
+        maxWidth: '100%',
+        width: 200,
+        height: 200,
+        borderRadius: 100,
+        border: '6px solid #2e344e',
+        verticalAlign: 'middle'
+
+    },
 	content: {
 		flexGrow: 1,
 		padding: theme.spacing(3),
@@ -56,14 +75,16 @@ function ResponsiveDrawer(props) {
 	const classes = useStyles();
 	const theme = useTheme();
 	const [mobileOpen, setMobileOpen] = React.useState(false);
-
+    const translate = getTranslate()
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
 	};
 
 	const drawer = (
 		<div>
-			<div className={classes.toolbar} />
+            <div className={classes.topDrawer} >
+                <img src={ProfileImage} alt={translate.name} className={classes.profileImage} />
+            </div>
 			<Divider />
 			<List>
 				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -140,26 +161,11 @@ function ResponsiveDrawer(props) {
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
 					dolor purus non enim praesent elementum facilisis leo vel. Risus at
 					ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-					quisque non tellus. Convallis convallis tellus id interdum velit
-					laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-					adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-					integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-					eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-					quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-					vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-					lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-					faucibus et molestie ac.
+					quisq
 				</Typography>
 				<Typography paragraph>
 					Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-					ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-					elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-					sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-					mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-					risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-					purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-					tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-					morbi tristique senectus et. Adipiscing elit duis tristique
+					ult. Adipiscing elit duis tristique
 					sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
 					eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
 					posuere sollicitudin aliquam ultrices sagittis orci a.
