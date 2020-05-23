@@ -10,7 +10,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import EmailIcon from '@material-ui/icons/MailOutline';
 import MusicNotIcon from '@material-ui/icons/MusicNote';
-
+import { getTranslate} from '../localization/index'
+ 
 
 const useStyle = makeStyles((theme) => ({
 	root: {
@@ -44,6 +45,8 @@ const useStyle = makeStyles((theme) => ({
 	},
 }));
 
+const translate = getTranslate()
+
 export default function HomeScreen() {
     const classes = useStyle()
 
@@ -54,7 +57,9 @@ export default function HomeScreen() {
 				<div id="stars3"></div>
 				<Grid>
 					<Typography variant="h1">
-						Hi, I am <span className={classes.nameText}>Sara Fotros</span>{' '}
+						{translate.hi} 
+						<span className={classes.nameText}> {translate.name} </span>
+						{translate.hi2} 
 					</Typography>
 					<Typography variant="subtitle1">
 						I am a junior Full stack web developer, with a background as a

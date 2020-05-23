@@ -8,25 +8,26 @@ const theme = createMuiTheme({
 	spacing: 2.5,
 	typography: {
 		h1: {
-			fontWeight: 700,
-			fontSize: '3.2857rem',
+			fontWeight: 600,
+			fontSize: '3.2rem',
 			lineHeight: '4rem',
+			color: '#FFF',
 			fontFamily: getFont(),
 		},
 		h2: {
-			fontWeight: 700,
+			fontWeight: 600,
 			fontSize: '2.57rem',
 			lineHeight: '3.2857rem',
 			fontFamily: getFont(),
 		},
 		h3: {
-			fontWeight: 600,
+			fontWeight: 500,
 			fontSize: '2rem',
 			lineHeight: '2.7rem',
 			fontFamily: getFont(),
 		},
 		h4: {
-			fontWeight: 600,
+			fontWeight: 500,
 			fontSize: '1.71rem',
 			lineHeight: '2.43rem',
 			fontFamily: getFont(),
