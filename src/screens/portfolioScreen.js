@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function portfolioScreen() {
+export default function PortfolioScreen() {
     return <div>portfolioScreen</div>;
 }

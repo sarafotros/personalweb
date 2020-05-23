@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function contactScreen() {
+export default function ContactScreen() {
     return <div>contactScreen</div>;
 }

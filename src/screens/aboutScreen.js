@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function aboutScreen() {
+export default function AboutScreen() {
     return <div>aboutScreen</div>;
 }
