@@ -1,11 +1,12 @@
 export default {
 	name: ' Sara Fotros',
 	home: 'HOME',
-	about: 'ABOUT ME',
+	about: 'ABOUT',
 	resume: 'RESUME',
 	portfolio: 'PORTFOLIO',
 	contact: 'CONTACT',
 	hi: 'Hi, I am ',
 	hi2: ' ',
-	desc: 'I am a junior Full stack web developer, with a background as a professional musician and tutor.'
+	desc:'I am a junior Full stack web developer, with a background as a professional musician and tutor.',
+	aboutme: 'ABOUT ME',
 };

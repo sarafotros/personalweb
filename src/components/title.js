@@ -17,8 +17,9 @@ const useStyles = makeStyles(theme => ({
             left: 0,
             top: 'auto',
             bottom: 0,
-            height: 35,
-            borderRadius: 300,
+            height: 5,
+            borderRadius: 100,
+            width: 35,
             background: '#037fff',
         },
         "&::before": {
@@ -34,12 +35,12 @@ const useStyles = makeStyles(theme => ({
         }
     },
     subtitle: {
-        fontSize: '4.5rem',
+        fontSize: '4rem',
         position: 'absolute',
-        left: 0,
-        top: '90%',
+        left: 15,
+        top: '100%',
         lineHeight: '1rem',
-        fontWeight: 900,
+        fontWeight: 700,
         color: 'rgba(25,29,43,.44)',
         display: 'inline-block',
         zIndex: -1,
@@ -47,12 +48,14 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function Title() {
+export default function Title({title}) {
     const classes = useStyles()
     return (
-        <div className={classes.root}>
-            <Typography className={classes.title} variant='h2' >About Me</Typography>
-            <span className={classes.subtitle}>ABOUT ME</span>
-       </div>
-    )
+			<div className={classes.root}>
+				<Typography className={classes.title} variant="h2">
+					{title}
+				</Typography>
+				<span className={classes.subtitle}>{title}</span>
+			</div>
+		);
 }
