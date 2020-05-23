@@ -15,7 +15,8 @@ export { getDirection }
 
 const fonts = {
 	fa: 'IRANSans',
-	en: 'Raleway',
+	// en: 'Raleway',
+	en: 'Nunito',
 };
 
 function getFont() {
