@@ -1,5 +1,28 @@
-import React from 'react'
-
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { getTranslate } from '../localization/index';
+import { Grid, Typography } from '@material-ui/core';
+import Title from '../components/title'
+ 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		minHeight: '100vh',
+	},
+    aboutGrid: {
+        paddingTop: 60,
+        paddingRight: 30,
+       paddingLeft: 30,
+    }
+}));
+const translate = getTranslate()
 export default function AboutScreen() {
-    return <div>aboutScreen</div>;
+    const classes = useStyles()
+
+    return (
+			<Grid container className={classes.root}>
+            <Grid className={classes.aboutGrid} item container xs={12}>{translate.about}</Grid>
+            <Title/>
+			</Grid>
+		);
 }
+ 

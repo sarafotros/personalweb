@@ -92,7 +92,7 @@ function ResponsiveDrawer(props) {
 	const { window } = props;
 	const classes = useStyles();
 	const [mobileOpen, setMobileOpen] = React.useState(false);
-	const [page, setPage] = useState(0)
+	const [page, setPage] = useState(1)
 	const translate = getTranslate();
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
@@ -114,6 +114,7 @@ function ResponsiveDrawer(props) {
 						style={{
 							backgroundColor: page === 0 ? '#037fff' : 'transparent',
 							paddingLeft: 0,
+							paddingRight: 0,
 						}}
 						onClick={() => {
 							setPage(0);
@@ -140,6 +141,7 @@ function ResponsiveDrawer(props) {
 						style={{
 							backgroundColor: page === 1 ? '#037fff' : 'transparent',
 							paddingLeft: 0,
+							paddingRight: 0,
 						}}
 						onClick={() => {
 							setPage(1);
@@ -166,6 +168,7 @@ function ResponsiveDrawer(props) {
 						style={{
 							backgroundColor: page === 2 ? '#037fff' : 'transparent',
 							paddingLeft: 0,
+							paddingRight: 0,
 						}}
 						onClick={() => {
 							setPage(2);
@@ -192,6 +195,7 @@ function ResponsiveDrawer(props) {
 						style={{
 							backgroundColor: page === 3 ? '#037fff' : 'transparent',
 							paddingLeft: 0,
+							paddingRight: 0,
 						}}
 						onClick={() => {
 							setPage(3);
@@ -218,6 +222,7 @@ function ResponsiveDrawer(props) {
 						style={{
 							backgroundColor: page === 4 ? '#037fff' : 'transparent',
 							paddingLeft: 0,
+							paddingRight: 0,
 						}}
 						onClick={() => {
 							setPage(4);

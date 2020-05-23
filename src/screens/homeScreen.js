@@ -62,13 +62,9 @@ export default function HomeScreen() {
 						{translate.hi2} 
 					</Typography>
 					<Typography variant="subtitle1">
-						I am a junior Full stack web developer, with a background as a
-						professional musician and tutor.
+						{translate.desc}
 					</Typography>
 					<div className={classes.divIcons}>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<TelegramIcon />
-						</IconButton>
 						<IconButton color="secondary" className={classes.iconButtonStyle}>
 							<LinkedInIcon />
 						</IconButton>

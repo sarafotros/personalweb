@@ -19,6 +19,7 @@ const theme = createMuiTheme({
 			fontSize: '2.57rem',
 			lineHeight: '3.2857rem',
 			fontFamily: getFont(),
+			color: '#FFF'
 		},
 		h3: {
 			fontWeight: 500,
