@@ -58,13 +58,20 @@ const theme = createMuiTheme({
 			color: '#a4acc4',
 			fontFamily: getFont(),
 		},
+		body2: {
+			fontSize: '.94rem',
+			fontWeight: 600,
+			color: '#a4acc4',
+			fontFamily: getFont(),
+			letterSpacing: 1,
+			textAlign: 'center'
+		},
 		button: {
 			fontWeight: 400,
 			fontSize: '0.9rem',
-			lineHeight: 50,
 			color: '#FFF',
-            fontFamily: getFont(),
-            letterSpacing:2,
+			fontFamily: getFont(),
+			letterSpacing: 2,
 		},
 	},
 });
