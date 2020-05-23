@@ -11,12 +11,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles} from '@material-ui/core/styles';
 import ProfileImage from '../assets/images/profPic1.jpg';
-import { getTranslate, changeLanguage } from '../localization/index';
+import { getTranslate, changeLanguage, lang} from '../localization/index';
 import HomeScreen from './homeScreen';
 import AboutScreen from './aboutScreen';
 import ResumeScreen from './resumeScreen';
 import PortfolioScreen from './portfolioScreen';
 import ContactScreen from './contactScreen';
+import './index.css'
 
 
 
@@ -25,6 +26,7 @@ const drawerWidth = 260;
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
+		position: 'relative'
 	},
 	drawer: {
 		[theme.breakpoints.up('sm')]: {
@@ -39,13 +41,13 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: 0,
 		cursor: 'pointer',
 		border: '1px solid #2e344e',
-		position: 'absolute',
+		position: 'fixed',
 		top: 20,
-		borderRadius:1,
+		borderRadius: 1,
 		backgroundColor: theme.palette.primary.backgroundColor,
 		[theme.breakpoints.up('sm')]: {
 			display: 'none',
-        },  
+		},
 	},
 	// necessary for content to be below app bar
 	topDrawer: {
@@ -70,14 +72,16 @@ const useStyles = makeStyles((theme) => ({
 	},
 	content: {
 		flexGrow: 1,
-		padding: theme.spacing(3),
+		paddingRight: theme.spacing(3),
+		paddingLeft: theme.spacing(3),
+		position: 'relative'
 	},
 	bottomDrawer: {
 		padding: 15,
 		borderTop: '1px soli #2e344e',
 	},
-    centerDrawer: {
-        display: 'flex',
+	centerDrawer: {
+		display: 'flex',
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -104,54 +108,154 @@ function ResponsiveDrawer(props) {
 				/>
 			</div>
 			<div className={classes.centerDrawer}>
-				<List>
-					<ListItem button>
+				<List style={{ width: '100%' }}>
+					<ListItem
+						className={page === 0 ? null : 'listItem'}
+						style={{
+							backgroundColor: page === 0 ? '#037fff' : 'transparent',
+							paddingLeft: 0,
+						}}
+						onClick={() => {
+							setPage(0);
+							setMobileOpen(false);
+						}}
+						button
+					>
 						<ListItemText
 							disableTypography={true}
 							children={
-								<Typography variant="body2">{translate.home}</Typography>
+								<Typography
+									className="listItemText"
+									style={{ color: page === 0 ? '#FFF' : '#a4acc4' }}
+									variant="body2"
+								>
+									{translate.home}
+								</Typography>
 							}
 						/>
+						<div className="overlay" />
 					</ListItem>
-					<ListItem button>
+					<ListItem
+						className={page === 1 ? null : 'listItem'}
+						style={{
+							backgroundColor: page === 1 ? '#037fff' : 'transparent',
+							paddingLeft: 0,
+						}}
+						onClick={() => {
+							setPage(1);
+							setMobileOpen(false);
+						}}
+						button
+					>
 						<ListItemText
 							disableTypography={true}
 							children={
-								<Typography variant="body2">{translate.about}</Typography>
+								<Typography
+									className="listItemText"
+									style={{ color: page === 1 ? '#FFF' : '#a4acc4' }}
+									variant="body2"
+								>
+									{translate.about}
+								</Typography>
 							}
 						/>
+						<div className="overlay" />
 					</ListItem>
-					<ListItem button>
+					<ListItem
+						className={page === 2 ? null : 'listItem'}
+						style={{
+							backgroundColor: page === 2 ? '#037fff' : 'transparent',
+							paddingLeft: 0,
+						}}
+						onClick={() => {
+							setPage(2);
+							setMobileOpen(false);
+						}}
+						button
+					>
 						<ListItemText
 							disableTypography={true}
 							children={
-								<Typography variant="body2">{translate.resume}</Typography>
+								<Typography
+									className="listItemText"
+									style={{ color: page === 2 ? '#FFF' : '#a4acc4' }}
+									variant="body2"
+								>
+									{translate.resume}
+								</Typography>
 							}
 						/>
+						<div className="overlay" />
 					</ListItem>
-					<ListItem button>
+					<ListItem
+						className={page === 3 ? null : 'listItem'}
+						style={{
+							backgroundColor: page === 3 ? '#037fff' : 'transparent',
+							paddingLeft: 0,
+						}}
+						onClick={() => {
+							setPage(3);
+							setMobileOpen(false);
+						}}
+						button
+					>
 						<ListItemText
 							disableTypography={true}
 							children={
-								<Typography variant="body2">{translate.portfolio}</Typography>
+								<Typography
+									className="listItemText"
+									style={{ color: page === 3 ? '#FFF' : '#a4acc4' }}
+									variant="body2"
+								>
+									{translate.portfolio}
+								</Typography>
 							}
 						/>
+						<div className="overlay" />
 					</ListItem>
-					<ListItem button>
+					<ListItem
+						className={page === 4 ? null : 'listItem'}
+						style={{
+							backgroundColor: page === 4 ? '#037fff' : 'transparent',
+							paddingLeft: 0,
+						}}
+						onClick={() => {
+							setPage(4);
+							setMobileOpen(false);
+						}}
+						button
+					>
 						<ListItemText
 							disableTypography={true}
 							children={
-								<Typography variant="body2">{translate.contact}</Typography>
+								<Typography
+									className="listItemText"
+									style={{ color: page === 4 ? '#FFF' : '#a4acc4' }}
+									variant="body2"
+								>
+									{translate.contact}
+								</Typography>
 							}
 						/>
+						<div className="overlay" />
 					</ListItem>
 				</List>
 			</div>
 
 			<div className={classes.bottomDrawer}>
-				<Button onClick={() => changeLanguage('en')}>English</Button>
+				<Button
+					color={lang === 'en' ? 'primary' : 'secondary'}
+					onClick={() => changeLanguage('en')}
+				>
+					English
+				</Button>
 				{'/'}
-				<Button onClick={() => changeLanguage('fa')}>فارسی</Button>
+				<Button
+					color={lang === 'fa' ? 'primary' : 'secondary'}
+					onClick={() => changeLanguage('fa')}
+				>
+					فارسی
+				</Button>
 			</div>
 		</>
 	); 
@@ -179,15 +283,15 @@ function ResponsiveDrawer(props) {
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						edge="start"
-						onClick={handleDrawerToggle}
-						className={classes.menuButton}
-					>
-						<MenuIcon />
-					</IconButton>
+			<IconButton
+				color="inherit"
+				aria-label="open drawer"
+				edge="start"
+				onClick={handleDrawerToggle}
+				className={classes.menuButton}
+			>
+				<MenuIcon />
+			</IconButton>
 			<nav className={classes.drawer} aria-label="mailbox folders">
 				{/* The implementation can be swapped with js to avoid SEO duplication of links. */}
 				<Hidden smUp implementation="css">
@@ -220,27 +324,11 @@ function ResponsiveDrawer(props) {
 				</Hidden>
 			</nav>
 			<main className={classes.content}>
-				<div className={classes.toolbar} />
-				<Typography paragraph>
-					Full stack web developer, with a background as a professional musician
-					and tutor. Extensive experience as a tutor with a firm basis for
-					problem solving with an ability to break down tasks into simple steps
-					whilst collaborating and actively learning with others. I enjoy taking
-					on new challenges, and am able to combine my logical mindset, and the
-					structured, yet creative nature that I have developed as a musician,
-					in coding. Another passion of mine is Basketball, which I have played
-					at a competitive level.
-				</Typography>
-				<Typography paragraph>
-					I have always had two passions in my life: Technology and Music.
-					Although I did my bachelor’s degree in Electrical Engineering, I
-					pursued a career in Music. Further to the above, I have completed a
-					Master of Business Administration in Arts in 2018. I have been
-					teaching and performing percussions professionally for many years but
-					I’ve always been interested in the tech space and, while my background
-					has mainly been in music, I’m ready to dive headfirst into the digital
-					world.
-				</Typography>
+				<span className="line1" />
+				<span className="line2" />
+				<span className="line3" />
+				<span className="line4" />
+				{getPage()}
 			</main>
 		</div>
 	);
