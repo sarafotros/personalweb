@@ -40,10 +40,11 @@ const useStyles = makeStyles(theme => ({
         left: 15,
         top: '90%',
         fontWeight: 700,
-        color: 'rgba(25,29,43,.44)',
+        color: 'rgba(25,29,43,.64)',
         display: 'inline-block',
         zIndex: -1,
-    }
+    },
+    
 }));
 
 export default function Title({title}) {
