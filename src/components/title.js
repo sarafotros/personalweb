@@ -35,16 +35,14 @@ const useStyles = makeStyles(theme => ({
         }
     },
     subtitle: {
-        fontSize: '4rem',
+        fontSize: '3.2rem',
         position: 'absolute',
         left: 15,
-        top: '100%',
-        lineHeight: '1rem',
+        top: '90%',
         fontWeight: 700,
         color: 'rgba(25,29,43,.44)',
         display: 'inline-block',
         zIndex: -1,
-        transform: 'translateY(-40%)'
     }
 }));
 
