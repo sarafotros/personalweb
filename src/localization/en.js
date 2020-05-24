@@ -8,8 +8,10 @@ export default {
 	hi: 'Hi, I am ',
 	hi2: ' ',
 	IAm: 'I am',
-	desc: 'I am a Junior Full Stack Developer with a focus on JavaScript including React and Redux. I come from a Music and teaching Percussions background',
-	desc2: 'Full stack web developer, with a background as a professional musician and tutor. Extensive experience as a tutor with a firm basis for problem solving whilst collaborating and actively learning with others. I enjoy taking on new challenges, and am able to combine my logical mindset, and the structured, yet creative nature that I have developed as a musician, in coding.',
+	desc:
+		'I am a Junior Full Stack Developer with a focus on JavaScript including React and Redux. I come from a Music and teaching Percussions background',
+	desc2:
+		'Full stack web developer, with a background as a professional musician and tutor. Extensive experience as a tutor with a firm basis for problem solving whilst collaborating and actively learning with others. I enjoy taking on new challenges, and am able to combine my logical mindset, and the structured, yet creative nature that I have developed as a musician, in coding.',
 	aboutme: 'ABOUT ME',
 	services: 'SERVICES',
 	fullname: 'Full Name',
@@ -22,4 +24,12 @@ export default {
 	eng: 'English & Persian',
 	available: 'Available',
 	downloadcv: 'DOWNLOAD CV',
+	webdesign: 'Web Design',
+	webdevelop: 'Web Development',
+	mobileapp: 'Mobile Application',
+	descdesgin:
+		'Built a RESTFUL API with Ruby on the Rails, with endpoints for users and points. Frontend built with JavaScript and React, and Router',
+	descwebdev:
+		'Frontend built with JavaScript and React, and React Router and Bootstrap and CSS for styling',
+	descmobApp: 'React Native/Flutter/Dart... Comming Soon!',
 };

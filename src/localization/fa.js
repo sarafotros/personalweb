@@ -24,4 +24,12 @@ export default {
 	eng: 'فارسی و انگلیسی ',
 	available: 'Available',
 	downloadcv: ' دانلود رزومه ',
+	webdesign: ' طراحی وب‌سایت ',
+	webdevelop: ' کدنویسی و توسعه وب ',
+	mobileapp: ' اپلیکیشن موبایل ',
+	descdesgin:
+		'Built a RESTFUL API with Ruby on the Rails, with endpoints for users and points. Frontend built with JavaScript and React, and Router',
+	descwebdev:
+		'Frontend built with JavaScript and React, and React Router and Bootstrap and CSS for styling',
+	descmobApp: 'React Native/Flutter/Dart... Comming Soon!',
 };

@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
 		border: '1px solid #2e344e',
 		position: 'fixed',
 		top: 20,
+		zIndex:1,
 		borderRadius: 1,
 		backgroundColor: theme.palette.primary.backgroundColor,
 		[theme.breakpoints.up('sm')]: {

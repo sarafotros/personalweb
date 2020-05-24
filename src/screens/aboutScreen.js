@@ -134,23 +134,20 @@ export default function AboutScreen() {
 			<Grid className={classes.aboutGrid} item container xs={12}>
 				<Title title={translate.services} />
 				<Grid container direction="row" className={classes.mainAbout}>
-					<Service
-						icon={<ColorLensIcon className={classes.iconStyle} />}
-						title="Web Design"
-						description="Built a RESTFUL API with Ruby on the Rails, with endpoints for users
-						and points. Frontend built with JavaScript and React, and React
-						Router"
+                    <Service
+                        icon={<ColorLensIcon className={classes.iconStyle} />}
+                        title={translate.webdesign}
+						description={translate.descdesgin}
 					/>
 					<Service
 						icon={<CodeIcon className={classes.iconStyle} />}
-						title="Web Development"
-						description="Frontend built with JavaScript and React, and React
-						Router and Bootstrap and CSS for styling"
+						title={translate.webdevelop}
+						description={translate.descwebdev}
 					/>
 					<Service
 						icon={<PhoneIcon className={classes.iconStyle} />}
-						title="Mobile Application"
-						description="React Native/Flutter/Dart... Comming Soon!"
+						title={translate.mobileapp}
+						description={translate.descmobApp}
 					/>
 				</Grid>
 			</Grid>
