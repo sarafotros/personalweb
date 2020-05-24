@@ -5,6 +5,7 @@ import { Grid, Typography } from '@material-ui/core';
 import Title from '../components/title';
 import MainImg from '../assets/images/tnk.jpeg';
 import Button from '@material-ui/core/Button';
+import Service from '../components/service'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -13,13 +14,17 @@ const useStyles = makeStyles((theme) => ({
 	aboutGrid: {
 		paddingTop: 60,
 		paddingRight: 20,
-		paddingLeft: 20,
+        paddingLeft: 20,
+        paddingBottom: 20
 	},
 	mainImg: {
 		width: '100%',
 		height: '100%',
 	},
-
+    // imageGrid: {
+    //    width: '90%',
+	//    height: '90%',  
+    // },
 	mainAbout: {
 		paddingLeft: theme.spacing(4),
 		paddingRight: theme.spacing(4),
@@ -31,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	aboutTextGrid: {
-		paddingRight: 40,
+		paddingRight: 30,
 		paddingLeft: 20,
 		[theme.breakpoints.down('xs')]: {
 			padding: 0,
@@ -67,56 +72,64 @@ export default function AboutScreen() {
 							{translate.hi2}
 						</Typography>
 						<Typography variant="body1" style={{ marginTop: 10 }}>
-							{translate.desc}
+							{translate.desc2}
 						</Typography>
 						<Typography variant="body1" style={{ marginTop: 10 }}>
 							{' '}
 							<b style={{ minWidth: 100, display: 'inline-block' }}>
-								Full Name
+								{translate.fullname}
 							</b>
-							{' : '}
-						</Typography>
-						<Typography variant="body1" style={{ marginTop: 10 }}>
-							{' '}
-							<b style={{ minWidth: 100, display: 'inline-block' }}>Location</b>
-							{' : '}
-						</Typography>
-						<Typography variant="body1" style={{ marginTop: 10 }}>
-							{' '}
-							<b style={{ minWidth: 100, display: 'inline-block' }}>Skills</b>
-							{' : '}
+							{' : '} {translate.name}
 						</Typography>
 						<Typography variant="body1" style={{ marginTop: 10 }}>
 							{' '}
 							<b style={{ minWidth: 100, display: 'inline-block' }}>
-								Languages
+								{translate.location}
 							</b>
 							{' : '}
+							{translate.uk}
 						</Typography>
 						<Typography variant="body1" style={{ marginTop: 10 }}>
 							{' '}
 							<b style={{ minWidth: 100, display: 'inline-block' }}>
-								Freelance
+								{translate.skills}
 							</b>
 							{' : '}
+							{translate.js}
+						</Typography>
+						<Typography variant="body1" style={{ marginTop: 10 }}>
+							{' '}
+							<b style={{ minWidth: 100, display: 'inline-block' }}>
+								{translate.languages}
+							</b>
+							{' : '}
+							{translate.eng}
+						</Typography>
+						<Typography variant="body1" style={{ marginTop: 10 }}>
+							{' '}
+							<b style={{ minWidth: 100, display: 'inline-block' }}>
+								{translate.freelance}
+							</b>
+							{' : '}
+							{translate.available}
 						</Typography>
 						<div style={{ display: 'flex', marginTop: 40 }}>
 							<Button variant="contained" color="primary">
-								Download CV
+								{translate.downloadcv}
 							</Button>
 						</div>
 					</Grid>
 				</Grid>
 			</Grid>
-			
-            <Grid className={classes.aboutGrid} item container xs={12}>
+
+			<Grid className={classes.aboutGrid} item container xs={12}>
 				<Title title={translate.services} />
 				<Grid container direction="row" className={classes.mainAbout}>
-
-							
+					<Service />
+					<Service />
+					<Service />
 				</Grid>
 			</Grid>
-			
 		</Grid>
 	);
 }

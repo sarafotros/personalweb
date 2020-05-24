@@ -15,29 +15,33 @@
 }
 .line1 {
     width: 1px;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgba(46,52,78,0.3);
     position: absolute;
     left: 20%;
+    z-index: -1;
 }
 .line2 {
     width: 1px;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgba(46,52,78,0.3);
     position: absolute;
     left: 40%;
+    z-index: -1;
 }
 .line3 {
     width: 1px;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgba(46,52,78,0.3);
     position: absolute;
     left: 60%;
+    z-index: -1;
 }
 .line4 {
     width: 1px;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgba(46,52,78,0.3);
     position: absolute;
     left: 80%;
+    z-index: -1;
 }
