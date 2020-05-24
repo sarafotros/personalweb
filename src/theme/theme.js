@@ -40,6 +40,7 @@ const theme = createMuiTheme({
 			fontSize: getDirection() === 'rtl' ? 21 : 23,
 			lineHeight: '2.14rem',
 			fontFamily: getFont(),
+			color: '#FFF',
 		},
 
 		h6: {

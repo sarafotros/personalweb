@@ -6,6 +6,11 @@ import Title from '../components/title';
 import MainImg from '../assets/images/tnk.jpeg';
 import Button from '@material-ui/core/Button';
 import Service from '../components/service'
+import PhoneIcon from '@material-ui/icons/PhoneIphone';
+import CodeIcon from '@material-ui/icons/Code';
+import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
+import ColorLensIcon from '@material-ui/icons/ColorLens';
+
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -14,17 +19,17 @@ const useStyles = makeStyles((theme) => ({
 	aboutGrid: {
 		paddingTop: 60,
 		paddingRight: 20,
-        paddingLeft: 20,
-        paddingBottom: 20
+		paddingLeft: 20,
+		paddingBottom: 20,
 	},
 	mainImg: {
 		width: '100%',
 		height: '100%',
 	},
-    // imageGrid: {
-    //    width: '90%',
-	//    height: '90%',  
-    // },
+	// imageGrid: {
+	//    width: '90%',
+	//    height: '90%',
+	// },
 	mainAbout: {
 		paddingLeft: theme.spacing(4),
 		paddingRight: theme.spacing(4),
@@ -42,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
 			padding: 0,
 			marginTop: 10,
 		},
+	},
+	iconStyle: {
+		fontSize: 46,
+		color: theme.palette.primary.main,
 	},
 }));
 
@@ -125,9 +134,24 @@ export default function AboutScreen() {
 			<Grid className={classes.aboutGrid} item container xs={12}>
 				<Title title={translate.services} />
 				<Grid container direction="row" className={classes.mainAbout}>
-					<Service />
-					<Service />
-					<Service />
+					<Service
+						icon={<ColorLensIcon className={classes.iconStyle} />}
+						title="Web Design"
+						description="Built a RESTFUL API with Ruby on the Rails, with endpoints for users
+						and points. Frontend built with JavaScript and React, and React
+						Router"
+					/>
+					<Service
+						icon={<CodeIcon className={classes.iconStyle} />}
+						title="Web Development"
+						description="Frontend built with JavaScript and React, and React
+						Router and Bootstrap and CSS for styling"
+					/>
+					<Service
+						icon={<PhoneIcon className={classes.iconStyle} />}
+						title="Mobile Application"
+						description="React Native/Flutter/Dart... Comming Soon!"
+					/>
 				</Grid>
 			</Grid>
 		</Grid>
