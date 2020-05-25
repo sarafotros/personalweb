@@ -19,7 +19,10 @@ const useStyles = makeStyles((theme) => ({
 		paddingLeft: 20,
 		paddingBottom: 20,
 	},
-
+	[theme.breakpoints.down('xs')]: {
+		paddingRight: 5,
+		paddingLeft: 5,
+	},
 }));
 
 export default function ResumeScreen() {

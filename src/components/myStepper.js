@@ -6,6 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import StepConnector  from '@material-ui/core/StepConnector';
 import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -36,7 +37,13 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'flex-start',
-		alignItems: 'center'
+		alignItems: 'center',
+		[theme.breakpoints.down('xs')]: {
+			display: 'flex',
+			flexDirection: 'column',
+			justifyContent: 'center',
+			alignItems: 'flex-start',
+		},
 	},
 	title: {
 		marginLeft: 10,
@@ -45,12 +52,19 @@ const useStyles = makeStyles((theme) => ({
 	line: {
 		width: 30,
 		height: 1,
-		backgroundColor: '#2e344e'
+		backgroundColor: '#2e344e',
 	},
 	date: {
 		width: 180,
 		textAlign: 'left',
-	}
+	},
+	stepper: {
+		backgroundColor: 'transparent',
+		[theme.breakpoints.down('xs')]: {
+			paddingLeft: 0,
+			paddingRight:0,
+		}
+	},
 }));
 
 
@@ -97,7 +111,7 @@ export default function MyStepper() {
 		<div className={classes.root}>
 			<Stepper
 				connector={<StepConnector className={classes.stepConnector} />}
-				style={{ backgroundColor: 'transparent' }}
+				className={classes.stepper}
 				orientation="vertical"
 			>
 				{steps.map((step) =>
@@ -111,19 +125,28 @@ export default function MyStepper() {
 								<Typography className={classes.date} variant="h6">
 									{step.date}
 								</Typography>
-								<span className={classes.line}></span>
+								<Hidden xsDown>
+									<span className={classes.line}></span>
+								</Hidden>
 								<Typography className={classes.title} variant="h5">
 									{step.title}
 								</Typography>
 							</StepLabel>
 							<StepContent className={classes.stepContent}>
-								<div style={{ display: 'flex', flexDirection: 'row', padding: 15 }}>
-									<div style={{ width: 530 }}> </div>
-								  <div style={{  }}>
-									<Typography variant='h6' style={{textAlign:'left'}}>{step.content}</Typography>	
-									<Typography variant='body1'>{step.content}</Typography>									
-								  </div>
-							   </div>
+								<div
+									style={{ display: 'flex', flexDirection: 'row', paddingTop: 15 }}
+								>
+									<Hidden xsDown>
+										<div style={{ width: 400 }}> </div>
+									</Hidden>
+
+									<div style={{}}>
+										<Typography variant="h6" style={{ textAlign: 'left' }}>
+											{step.content}
+										</Typography>
+										<Typography variant="body1">{step.content}</Typography>
+									</div>
+								</div>
 							</StepContent>
 						</Step>
 					) : step.id === -1 ? (
