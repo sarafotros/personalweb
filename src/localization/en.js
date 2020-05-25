@@ -32,5 +32,71 @@ export default {
 	descwebdev:
 		'Frontend built with JavaScript and React, and React Router and Bootstrap and CSS for styling',
 	descmobApp: 'React Native/Flutter/Dart... Comming Soon!',
-	myskills: 'My Skills'
+	myskills: 'My Skills',
+	workingSteps: [
+		{
+			id: -1,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+		{
+			id: 0,
+			date: '2002 - 2019',
+			title: 'Musician',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: 1,
+			date: '2002 - 2019',
+			title: 'Musician',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: -2,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+	],
+	educationalSteps: [
+		{
+			id: -1,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+		{
+			id: 0,
+			date: '2029 - 2020',
+			title: 'Software engineering',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: 1,
+			date: '2002 - 2019',
+			title: 'Musician',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: -2,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+	],
+	workExperience: 'Work Experience',
+	educationalQualification:'Educational Qualification',
 };

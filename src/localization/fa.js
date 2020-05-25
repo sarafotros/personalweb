@@ -32,5 +32,71 @@ export default {
 	descwebdev:
 		'Frontend built with JavaScript and React, and React Router and Bootstrap and CSS for styling',
 	descmobApp: 'React Native/Flutter/Dart... Comming Soon!',
-	myskills: ' مهارت‌های من'
+	myskills: ' مهارت‌های من',
+	workingSteps: [
+		{
+			id: -1,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+		{
+			id: 0,
+			date: '۱۳۷۹-۱۳۹۸',
+			title: 'مدرس موسیقی',
+			subtitle: 'نوای شهرآشوب',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: 1,
+			date: '۱۳۷۹-۱۳۹۸',
+			title: ' نوازنده سازهای کوبه‌ای',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: -2,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+	],
+	educationalSteps: [
+		{
+			id: -1,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+		{
+			id: 0,
+			date: '۱۳۷۹-۱۳۹۸',
+			title: 'مهندسی نرم افزار',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: 1,
+			date: '۱۳۷۹-۱۳۹۸',
+			title: 'ارشد',
+			subtitle: 'Ajam',
+			content:
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+		},
+		{
+			id: -2,
+			date: '',
+			title: '',
+			subtitle: '',
+			content: '',
+		},
+	],
+	workExperience: 'تجربه‌های کاری',
+	educationalQualification: ' سوابق تحصیلی ',
 };

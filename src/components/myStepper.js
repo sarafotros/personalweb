@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.main,
 	},
 	line: {
-		width: 30,
+		width: 25,
 		height: 1,
 		backgroundColor: '#2e344e',
 	},
@@ -62,8 +62,11 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: 'transparent',
 		[theme.breakpoints.down('xs')]: {
 			paddingLeft: 0,
-			paddingRight:0,
-		}
+			paddingRight: 0,
+		},
+	},
+	subtitleStep: { 
+		textAlign: 'left'
 	},
 }));
 
@@ -71,40 +74,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function MyStepper() {
+export default function MyStepper({steps}) {
 	const classes = useStyles();
-	const steps = [
-		{
-			id: -1,
-			date: '',
-			title: '',
-			subtitle: '',
-			content: '',
-		},
-		{
-			id: 0,
-			date: '2002 - 2019',
-			title: 'Musician',
-			subtitle: 'Ajam',
-			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
-		},
-		{
-			id: 1,
-			date: '2002 - 2019',
-			title: 'Musician',
-			subtitle: 'Ajam',
-			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
-		},
-		{
-			id: -2,
-			date: '',
-			title: '',
-			subtitle: '',
-			content: '',
-		},
-	];
 
 
 	return (
@@ -137,11 +108,11 @@ export default function MyStepper() {
 									style={{ display: 'flex', flexDirection: 'row', paddingTop: 15 }}
 								>
 									<Hidden xsDown>
-										<div style={{ width: 400 }}> </div>
+										<div style={{ width: 200 }}> </div>
 									</Hidden>
 
-									<div style={{}}>
-										<Typography variant="h6" style={{ textAlign: 'left' }}>
+									<div style={{flex:1}}>
+										<Typography variant="h6" className={classes.subtitleStep}>
 											{step.content}
 										</Typography>
 										<Typography variant="body1">{step.content}</Typography>

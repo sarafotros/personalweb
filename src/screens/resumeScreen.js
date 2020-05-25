@@ -23,11 +23,16 @@ const useStyles = makeStyles((theme) => ({
 		paddingRight: 5,
 		paddingLeft: 5,
 	},
+    skillSecondTitle:{
+        marginLeft: 10,
+    }
 }));
 
 export default function ResumeScreen() {
 	const translate = getTranslate();
-	const classes = useStyles();
+    const classes = useStyles();
+    
+   
 	return (
 		<Grid
 			justify="flex-start"
@@ -61,10 +66,12 @@ export default function ResumeScreen() {
 					className={classes.mainAbout}
 				>
 					<BusinessCenterIcon style={{ fontSize: 34 }} />
-					<Typography style={{ marginLeft: 10 }}>Work Experience</Typography>
+					<Typography variant="h4" className={classes.skillSecondTitle}>
+						{translate.workExperience}
+					</Typography>
 				</Grid>
 				<Grid container style={{ marginTop: 15, marginBottom: 15 }}>
-					<MyStepper />
+					<MyStepper steps={translate.workingSteps} />
 				</Grid>
 				<Grid
 					container
@@ -74,10 +81,12 @@ export default function ResumeScreen() {
 					className={classes.mainAbout}
 				>
 					<SchoolIcon style={{ fontSize: 34 }} />
-					<Typography style={{ marginLeft: 10 }}>Educational Qualification</Typography>
+					<Typography variant="h4" className={classes.skillSecondTitle}>
+						{translate.educationalQualification}
+					</Typography>
 				</Grid>
 				<Grid container style={{ marginTop: 15, marginBottom: 15 }}>
-					<MyStepper />
+					<MyStepper steps={translate.educationalSteps} />
 				</Grid>
 			</Grid>
 		</Grid>
