@@ -12,13 +12,45 @@ const useStyles = makeStyles((theme) => ({
 		width: '100%',
 	},
 	stepConnector: {
+		paddingBottom: 0,
 		'& span': {
 			borderLeft: '3px solid #2e344e',
 		},
 	},
 	stepContent: {
 		borderLeft: '3px solid #2e344e',
+		marginTop: 0,
 	},
+	circle: {
+		width: 16,
+		height: 16,
+		borderRadius: 8,
+		border: '3px solid #2e344e',
+		marginLeft: 6,
+	},
+	stepLabel: {
+		display: 'flex',
+		flexDirection: 'row',
+	},
+	label: {
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'flex-start',
+		alignItems: 'center'
+	},
+	title: {
+		marginLeft: 10,
+		color: theme.palette.primary.main,
+	},
+	line: {
+		width: 30,
+		height: 1,
+		backgroundColor: '#2e344e'
+	},
+	date: {
+		width: 180,
+		textAlign: 'left',
+	}
 }));
 
 
@@ -68,17 +100,38 @@ export default function MyStepper() {
 				style={{ backgroundColor: 'transparent' }}
 				orientation="vertical"
 			>
-				{steps.map((step) => (
-					<Step active={true} key={step.id}>
-						<StepLabel icon>{step.title}</StepLabel>
-						<StepContent className={classes.stepContent}>
-							<Typography>{step.content}</Typography>
-							<div className={classes.actionsContainer}>
-								<div></div>
-							</div>
-						</StepContent>
-					</Step>
-				))}
+				{steps.map((step) =>
+					step.id >= 0 ? (
+						<Step active={true} key={step.id}>
+							<StepLabel
+								classes={{ label: classes.label }}
+								className={classes.stepLabel}
+								icon={<span className={classes.circle} />}
+							>
+								<Typography className={classes.date} variant="h6">
+									{step.date}
+								</Typography>
+								<span className={classes.line}></span>
+								<Typography className={classes.title} variant="h5">
+									{step.title}
+								</Typography>
+							</StepLabel>
+							<StepContent className={classes.stepContent}>
+								<div style={{ display: 'flex', flexDirection: 'row', padding: 15 }}>
+									<div style={{ width: 530 }}> </div>
+								  <div style={{  }}>
+									<Typography variant='h6' style={{textAlign:'left'}}>{step.content}</Typography>	
+									<Typography variant='body1'>{step.content}</Typography>									
+								  </div>
+							   </div>
+							</StepContent>
+						</Step>
+					) : step.id === -1 ? (
+						<Step active={true} key={step.id}>
+							<StepLabel icon={null}></StepLabel>
+						</Step>
+					) : null
+				)}
 			</Stepper>
 		</div>
 	);
