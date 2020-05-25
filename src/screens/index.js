@@ -93,7 +93,7 @@ function ResponsiveDrawer(props) {
 	const { window } = props;
 	const classes = useStyles();
 	const [mobileOpen, setMobileOpen] = React.useState(false);
-	const [page, setPage] = useState(1)
+	const [page, setPage] = useState(2)
 	const translate = getTranslate();
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);

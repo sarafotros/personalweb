@@ -48,6 +48,7 @@ const theme = createMuiTheme({
 			fontSize: getDirection() === 'rtl' ? 16 : 18,
 			lineHeight: '1.857rem',
 			fontFamily: getFont(),
+			color: '#FFF',
 		},
 		subtitle1: {
 			fontWeight: 400,
