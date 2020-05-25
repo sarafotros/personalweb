@@ -32,4 +32,5 @@ export default {
 	descwebdev:
 		'Frontend built with JavaScript and React, and React Router and Bootstrap and CSS for styling',
 	descmobApp: 'React Native/Flutter/Dart... Comming Soon!',
+	myskills: ' مهارت‌های من'
 };
