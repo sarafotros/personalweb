@@ -126,4 +126,8 @@ export default {
 	emailf: 'ایمیل',
 	subjectf: 'موضوع',
 	mesgF: 'پیام',
+	email: 'ایمیل',
+	address: 'نشانی',
+	phone: 'تلفن تماس'
+	
 };

@@ -105,19 +105,19 @@ export default function ContactScreen() {
 					</Grid>
 					<Grid className={classes.detailsGrid} item xs={12} md={6}>
 						<ContactBox
-							title="Phone"
+							title={translate.phone}
 							text1="(+44) 7401763373"
 							text2="(+98) 9133140149"
 							icon={<CallIcon className={classes.iconStyle} />}
 						/>
 						<ContactBox
-							title="Email"
+							title={translate.email}
 							text1="sarafotros@gmail.com"
 							// text2="twitter.com/sarafotros"
 							icon={<EmailIcon className={classes.iconStyle} />}
 						/>
 						<ContactBox
-							title="Address"
+							title={translate.address}
 							text1="London United Kingdom"
 							// text2="United Kingdom"
 							icon={<RoomIcon className={classes.iconStyle} />}

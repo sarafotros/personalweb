@@ -124,4 +124,8 @@ export default {
 	emailf: 'Email',
 	subjectf: 'Subject',
 	mesgF: 'Message',
+	email: 'Email',
+	address: 'Address',
+	phone: 'Phone',
+	
 };
