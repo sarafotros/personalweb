@@ -113,4 +113,5 @@ export default {
 	],
 	workExperience: 'Work Experience',
 	educationalQualification: 'Educational Qualification',
+	contactme: 'CONTACT ME',
 };

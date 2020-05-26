@@ -115,4 +115,5 @@ export default {
 	],
 	workExperience: 'تجربه‌های کاری',
 	educationalQualification: ' سوابق تحصیلی ',
+	contactme: '  اطلاعات تماس ',
 };

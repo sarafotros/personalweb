@@ -59,7 +59,7 @@ export default function AboutScreen() {
 	const classes = useStyles();
 	return (
 		<Grid
-			justify="flex-start"
+			// justify="flex-start"
 			alignItems="flex-start"
 			container
 			className={classes.root}
