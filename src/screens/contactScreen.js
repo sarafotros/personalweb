@@ -4,13 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { getTranslate } from '../localization/index';
 import { Grid, Typography, TextField } from '@material-ui/core';
 import Title from  '../components/title';
-import  './contact.css'
+import './contact.css'
+import ContactBox from '../components/contactBox';
 import Button from '@material-ui/core/Button';
-import Service from '../components/service';
-import PhoneIcon from '@material-ui/icons/PhoneIphone';
-import CodeIcon from '@material-ui/icons/Code';
-import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
-import ColorLensIcon from '@material-ui/icons/ColorLens';
+import CallIcon from '@material-ui/icons/CallOutlined';
+import EmailIcon from '@material-ui/icons/EmailOutlined';
+import RoomIcon from '@material-ui/icons/RoomOutlined';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -22,15 +21,22 @@ const useStyles = makeStyles((theme) => ({
 		paddingRight: 20,
 		paddingLeft: 20,
 		[theme.breakpoints.down('xs')]: {
-			paddingRight:5,
+			paddingRight: 5,
 			paddingLeft: 5,
 		},
 	},
-	formGrid: {},
-	detailsGrid: {},
+	formGrid: {
+		padding: 12,
+	},
+	detailsGrid: {
+		padding: 12,
+	},
 	getinTouch: {
 		textAlign: 'left',
 	},
+    iconStyle: {
+        fontSize: 30,
+    }
 }));
 
 export default function ContactScreen() {
@@ -41,10 +47,10 @@ export default function ContactScreen() {
 			<Grid className={classes.contactGrid} item container xs={12}>
 				<Title title={translate.contactme} />
 				<Grid container direction="row" className={classes.formGrid}>
-					<Grid className={classes.imageGrid} item xs={12} md={6}>
+					<Grid className={classes.formGrid} item xs={12} md={6}>
 						<Typography className={classes.getinTouch} variant="h4">
 							{' '}
-							Get In Touch
+							{translate.getinTouch}
 						</Typography>
 						<TextField
 							style={{ marginTop: 25 }}
@@ -52,8 +58,8 @@ export default function ContactScreen() {
 							fullWidth
 							required
 							id="outlined-required"
-							label="Enter Your Name"
-							defaultValue="Name"
+							label={translate.enterYourName}
+							// defaultValue={translate.namef}
 							variant="outlined"
 						/>
 						<TextField
@@ -62,8 +68,8 @@ export default function ContactScreen() {
 							fullWidth
 							required
 							id="outlined-required"
-							label="Enter Your Email"
-							defaultValue="Email"
+							label={translate.enterYourEmail}
+							// defaultValue={translate.emailf}
 							variant="outlined"
 						/>
 						<TextField
@@ -72,8 +78,8 @@ export default function ContactScreen() {
 							fullWidth
 							required
 							id="outlined-required"
-							label="Enter Your Subject"
-							defaultValue="Subject"
+							label={translate.enterYourSubject}
+							// defaultValue={translate.subjectf}
 							variant="outlined"
 						/>
 						<TextField
@@ -82,15 +88,41 @@ export default function ContactScreen() {
 							fullWidth
 							required
 							id="outlined-required"
-							label="Enter Your Message"
-							defaultValue="Message"
-                            variant="outlined"
-                            multiline={true}
-                            rows={6}
-                        />
-                        <Button variant='contained' color='primary' size='large' style={{marginTop:25, display:'flex'}}>Send Message</Button>
+							label={translate.enterYourMessage}
+							// defaultValue={translate.mesgF}
+							variant="outlined"
+							multiline={true}
+							rows={6}
+						/>
+						<Button
+							variant="contained"
+							color="primary"
+							size="large"
+							style={{ marginTop: 25, display: 'flex' }}
+						>
+							{translate.sendMessage}
+						</Button>
 					</Grid>
-					<Grid className={classes.detailsGrid} item xs={12} md={6}></Grid>
+					<Grid className={classes.detailsGrid} item xs={12} md={6}>
+						<ContactBox
+							title="Phone"
+							text1="(+44) 7401763373"
+							text2="(+98) 9133140149"
+							icon={<CallIcon className={classes.iconStyle} />}
+						/>
+						<ContactBox
+							title="Email"
+							text1="sarafotros@gmail.com"
+							// text2="twitter.com/sarafotros"
+							icon={<EmailIcon className={classes.iconStyle} />}
+						/>
+						<ContactBox
+							title="Address"
+							text1="London United Kingdom"
+							// text2="United Kingdom"
+							icon={<RoomIcon className={classes.iconStyle} />}
+						/>
+					</Grid>
 				</Grid>
 			</Grid>
 		</Grid>
