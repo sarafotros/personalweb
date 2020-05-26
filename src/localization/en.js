@@ -44,13 +44,21 @@ export default {
 		{
 			id: 0,
 			date: '2002 - 2019',
+			title: 'Information Systems Engineer ',
+			subtitle: 'Mortabet Rayane',
+			content:
+				'Information Systems Engineer for Mortabet Rayane, Information Technology Company, in Tehran, Iran',
+		},
+		{
+			id: 1,
+			date: '2002 - 2019',
 			title: 'Musician',
 			subtitle: 'Ajam',
 			content:
 				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
 		},
 		{
-			id: 1,
+			id: 2,
 			date: '2002 - 2019',
 			title: 'Musician',
 			subtitle: 'Ajam',
@@ -75,19 +83,25 @@ export default {
 		},
 		{
 			id: 0,
-			date: '2029 - 2020',
+			date: '2019 - 2020',
 			title: 'Software engineering',
-			subtitle: 'Ajam',
+			subtitle: 'Flatiron, London, UK',
 			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+				'Full Stack Web Development, Ruby on Rails, React, and JavaScript',
 		},
 		{
 			id: 1,
-			date: '2002 - 2019',
-			title: 'Musician',
-			subtitle: 'Ajam',
-			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+			date: '2017-2018',
+			title: 'Master of Business Administration in Art',
+			subtitle: 'Bahar School of Management',
+			content: 'Tehran',
+		},
+		{
+			id: 2,
+			date: '2015',
+			title: 'Bachelor of science degree in Electrical engineering ',
+			subtitle: '	Azad University',
+			content: 'Iran, Isfahan',
 		},
 		{
 			id: -2,
@@ -98,5 +112,5 @@ export default {
 		},
 	],
 	workExperience: 'Work Experience',
-	educationalQualification:'Educational Qualification',
+	educationalQualification: 'Educational Qualification',
 };

@@ -72,8 +72,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-
-
 export default function MyStepper({steps}) {
 	const classes = useStyles();
 

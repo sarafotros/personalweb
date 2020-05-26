@@ -31,7 +31,7 @@ export default {
 		'Built a RESTFUL API with Ruby on the Rails, with endpoints for users and points. Frontend built with JavaScript and React, and Router',
 	descwebdev:
 		'Frontend built with JavaScript and React, and React Router and Bootstrap and CSS for styling',
-	descmobApp: 'React Native/Flutter/Dart... Comming Soon!',
+	descmobApp: 'React Native/Flutter/Dart... Coming Soon!',
 	myskills: ' مهارت‌های من',
 	workingSteps: [
 		{
@@ -44,10 +44,10 @@ export default {
 		{
 			id: 0,
 			date: '۱۳۷۹-۱۳۹۸',
-			title: 'مدرس موسیقی',
+			title: 'مدرس سازهاى كوبه اى ايرانى',
 			subtitle: 'نوای شهرآشوب',
 			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+				'اصفهان(از سال ١٣٧٩): تدريس درفرهنگسراها و مراكز فرهنگى هنرى(خانه كودك، باغ غدير، فرهنگسراى خورشيد) موسسات فرهنگى هنرى(سپاهان سينا، نغمه گشايش، زيگورات، طنين)',
 		},
 		{
 			id: 1,
@@ -55,7 +55,7 @@ export default {
 			title: ' نوازنده سازهای کوبه‌ای',
 			subtitle: 'Ajam',
 			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+				'انگلستان، لندن(از سال ١٣٩٠) تدريس در مراكز فرهنگى ايرانيان، Kurdish Community Centre، تشكيل هنركده دف نوازى و گروه نوازى دف، تدريس دف در كالج Morley لندن در بخش سازهاى جهانى، تدريس در دانشگاه شرق شناسى لندنSOAS ',
 		},
 		{
 			id: -2,
@@ -79,15 +79,31 @@ export default {
 			title: 'مهندسی نرم افزار',
 			subtitle: 'Ajam',
 			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+				'نوازندگى سازهاى كوبه اى در گروه هاى مختلف اصفهان( اركستر ملّى سپاهان، اركستر مجلسى اصفهان، گروه بانوان ايراندخت، شورانگيز، حق جويان، پيام، آفريده)',
 		},
 		{
 			id: 1,
 			date: '۱۳۷۹-۱۳۹۸',
-			title: 'ارشد',
-			subtitle: 'Ajam',
+			title: 'کارشناسی ارشد Art MBA',
+			subtitle: ' موسسه آموزش عالى بهار',
 			content:
-				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque autem nam nulla provident? Reiciendis alias id blanditiis eiu ee fugit. Illum ducimus voluptate corporis. saksj jdsjdks',
+				'نوازندگى سازهاى كوبه اى در گروه هاى مختلف اصفهان( اركستر ملّى سپاهان، اركستر مجلسى اصفهان، گروه بانوان ايراندخت، شورانگيز، حق جويان، پيام، آفريده)',
+		},
+		{
+			id: 2,
+			date: '۲۰۱۱-۲۰۱۲',
+			title: 'فارغ التحصيل موسيقى از كالج موسيقى',
+			subtitle: '  Morley لندن',
+			content:
+				'همكارى با اساتيد برجسته موسيقى نواحى و مقامى: ايرج رحمان پور و احسان عبدى پور(لرستان)، كوروش اسد پور(بختيارى) سعيد طهرانى زاده(شمال خراسان) عليرضا فيض بشى پور(كردستان) جمال محمدى و استاد ابوالحسن خوشرو(مازندران) ',
+		},
+		{
+			id: 3,
+			date: '۱۳۷۸-۱۳۸۳',
+			title: 'ارشناسى مهندسى الكترونيك',
+			subtitle: ' دانشگاه آزاد اسلامی واحد نجف آباد',
+			content:
+				'كارشناسى مهندسى الكترونيك ۱۳۷۸-۱۳۸۳ دانشگاه آزاد اسلامی واحد نجف آباد',
 		},
 		{
 			id: -2,
