@@ -12,6 +12,11 @@ import MyStepper from '../components/myStepper'
 const useStyles = makeStyles((theme) => ({
 	root: {
 		minHeight: '100vh',
+		padding: 45,
+		[theme.breakpoints.down('xs')]: {
+			paddingRight: 10,
+			paddingLeft: 10,
+		},
 	},
 	skillGrid: {
 		paddingTop: 60,
@@ -23,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
 		paddingRight: 5,
 		paddingLeft: 5,
 	},
-    skillSecondTitle:{
-        marginLeft: 10,
-    }
+	skillSecondTitle: {
+		marginLeft: 10,
+	},
 }));
 
 export default function ResumeScreen() {
