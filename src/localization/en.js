@@ -127,5 +127,5 @@ export default {
 	email: 'Email',
 	address: 'Address',
 	phone: 'Phone',
-	
+
 };
