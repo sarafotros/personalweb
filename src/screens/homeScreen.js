@@ -3,13 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import {Grid, Typography} from '@material-ui/core'
 import './home.css'
-import TelegramIcon from '@material-ui/icons/Telegram';
+// import TelegramIcon from '@material-ui/icons/Telegram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import EmailIcon from '@material-ui/icons/MailOutline';
-import MusicNotIcon from '@material-ui/icons/MusicNote';
+// import EmailIcon from '@material-ui/icons/MailOutline';
+// import MusicNotIcon from '@material-ui/icons/MusicNote';
 import { getTranslate } from '../localization/index'
 import { ButtonBase } from '@material-ui/core';
  
@@ -84,15 +84,34 @@ export default function HomeScreen() {
 								<LinkedInIcon />
 							</IconButton>
 						</a>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<GitHubIcon />
-						</IconButton>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<InstagramIcon />
-						</IconButton>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<YouTubeIcon />
-						</IconButton>
+						<a
+							href="https://github.com/sarafotros"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<GitHubIcon />
+							</IconButton>
+						</a>
+						<a
+							href="https://www.instagram.com/SaraFotros.Daf/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<InstagramIcon />
+							</IconButton>
+						</a>
+						<a
+							href="https://www.youtube.com/channel/UCAwaVFFL3c_hwkbMvEoMVtg"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<YouTubeIcon />
+							</IconButton>
+						</a>
+
 						<ButtonBase
 							color="secondary"
 							component="a"
@@ -100,7 +119,6 @@ export default function HomeScreen() {
 							target="_blank"
 							rel="noopener noreferrer"
 							className={classes.iconButtonStyle}
-							// style={{ marginLeft: 8, marginRight: 8 }}
 						>
 							<YouTubeIcon />
 						</ButtonBase>
