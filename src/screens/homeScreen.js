@@ -10,8 +10,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import EmailIcon from '@material-ui/icons/MailOutline';
 import MusicNotIcon from '@material-ui/icons/MusicNote';
-import { getTranslate } from '../localization/index'
-import { ButtonBase } from '@material-ui/core';
+import { getTranslate} from '../localization/index'
  
 
 const useStyle = makeStyles((theme) => ({
@@ -24,10 +23,10 @@ const useStyle = makeStyles((theme) => ({
 		alignItems: 'center',
 	},
 	nameText: {
-		color: theme.palette.primary.main,
-		[theme.breakpoints.down('xs')]: {
-			display: 'block',
-		},
+        color: theme.palette.primary.main,
+        [theme.breakpoints.down('xs')]: {
+            display: 'block'
+        }
 	},
 	divIcons: {
 		marginTop: 25,
@@ -43,19 +42,8 @@ const useStyle = makeStyles((theme) => ({
 			color: theme.palette.primary.main,
 			transition: '.5s',
 		},
-		// '& a': {
-		// 	textDecoration: 'none',
-		// 	color: '#FFF',
-		// 	transition: '.4s',
-		// 	'&:hover': {
-		// 		color: theme.palette.primary.main,
-		// 		transition: '.4s',
-		// 	},
-		// },
 	},
 }));
-
-
 
 const translate = getTranslate()
 
@@ -69,21 +57,17 @@ export default function HomeScreen() {
 				<div id="stars3"></div>
 				<Grid>
 					<Typography variant="h1">
-						{translate.hi}
+						{translate.hi} 
 						<span className={classes.nameText}> {translate.name} </span>
-						{translate.hi2}
+						{translate.hi2} 
 					</Typography>
-					<Typography variant="subtitle1">{translate.desc}</Typography>
+					<Typography variant="subtitle1">
+						{translate.desc}
+					</Typography>
 					<div className={classes.divIcons}>
-						<a
-							href="https://www.linkedin.com/in/sara-fotros/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<IconButton color="secondary" className={classes.iconButtonStyle}>
-								<LinkedInIcon />
-							</IconButton>
-						</a>
+						<IconButton color="secondary" className={classes.iconButtonStyle}>
+							<LinkedInIcon />
+						</IconButton>
 						<IconButton color="secondary" className={classes.iconButtonStyle}>
 							<GitHubIcon />
 						</IconButton>
@@ -93,17 +77,6 @@ export default function HomeScreen() {
 						<IconButton color="secondary" className={classes.iconButtonStyle}>
 							<YouTubeIcon />
 						</IconButton>
-						<ButtonBase
-							color="secondary"
-							component="a"
-							href="https://www.youtube.com/channel/UCAwaVFFL3c_hwkbMvEoMVtg"
-							target="_blank"
-							rel="noopener noreferrer"
-							className={classes.iconButtonStyle}
-							// style={{ marginLeft: 8, marginRight: 8 }}
-						>
-							<YouTubeIcon />
-						</ButtonBase>
 					</div>
 				</Grid>
 			</div>
