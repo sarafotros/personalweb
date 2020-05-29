@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4e206d0c.chunk.css",
+    "main.js": "/static/js/main.33cc1c35.chunk.js",
+    "main.js.map": "/static/js/main.33cc1c35.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a986343f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a986343f.js.map",
+    "static/js/2.1cfbade2.chunk.js": "/static/js/2.1cfbade2.chunk.js",
+    "static/js/2.1cfbade2.chunk.js.map": "/static/js/2.1cfbade2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d25b706ddfffd6e326435979e143297c.js": "/precache-manifest.d25b706ddfffd6e326435979e143297c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4e206d0c.chunk.css.map": "/static/css/main.4e206d0c.chunk.css.map",
+    "static/js/2.1cfbade2.chunk.js.LICENSE.txt": "/static/js/2.1cfbade2.chunk.js.LICENSE.txt",
+    "static/media/fontiran.css": "/static/media/IRANSansWeb_UltraLight.f8a4f691.ttf",
+    "static/media/profPic1.jpg": "/static/media/profPic1.41e28634.jpg",
+    "static/media/sara-fotros-daf.jpg": "/static/media/sara-fotros-daf.30ba47e8.jpg",
+    "static/media/scr2.png": "/static/media/scr2.91a5be78.png",
+    "static/media/sfJob.jpg": "/static/media/sfJob.65c31731.jpg",
+    "static/media/tnk.jpeg": "/static/media/tnk.62d7f47f.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a986343f.js",
+    "static/js/2.1cfbade2.chunk.js",
+    "static/css/main.4e206d0c.chunk.css",
+    "static/js/main.33cc1c35.chunk.js"
+  ]
+}
