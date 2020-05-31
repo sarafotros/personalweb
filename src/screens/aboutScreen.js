@@ -10,7 +10,7 @@ import PhoneIcon from '@material-ui/icons/PhoneIphone';
 import CodeIcon from '@material-ui/icons/Code';
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
 import ColorLensIcon from '@material-ui/icons/ColorLens';
-
+import my_resume from '../assets/images/Resume.pdf'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -123,7 +123,8 @@ export default function AboutScreen() {
 							{translate.available}
 						</Typography>
 						<div style={{ display: 'flex', marginTop: 40 }}>
-							<Button variant="contained" color="primary">
+							<Button variant="contained" color="primary" component='a'
+							href={my_resume}>
 								{translate.downloadcv}
 							</Button>
 						</div>

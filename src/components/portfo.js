@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
 	image: {
 		width: '100%',
 		cursor: 'pointer',
-		'&:hover': {
-			transform: 'rotate(360deg)',
-			transition: '1s',
-		},
+		// '&:hover': {
+		// 	transform: 'rotate(360deg)',
+		// 	transition: '1s',
+		// },
 	},
 	title: {
 		textAlign: 'left',
