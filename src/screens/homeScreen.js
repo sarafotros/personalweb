@@ -57,26 +57,48 @@ export default function HomeScreen() {
 				<div id="stars3"></div>
 				<Grid>
 					<Typography variant="h1">
-						{translate.hi} 
+						{translate.hi}
 						<span className={classes.nameText}> {translate.name} </span>
-						{translate.hi2} 
+						{translate.hi2}
 					</Typography>
-					<Typography variant="subtitle1">
-						{translate.desc}
-					</Typography>
+					<Typography variant="subtitle1">{translate.desc}</Typography>
 					<div className={classes.divIcons}>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<LinkedInIcon />
-						</IconButton>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<GitHubIcon />
-						</IconButton>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<InstagramIcon />
-						</IconButton>
-						<IconButton color="secondary" className={classes.iconButtonStyle}>
-							<YouTubeIcon />
-						</IconButton>
+						<a
+							href="https://www.linkedin.com/in/sara-fotros/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<LinkedInIcon />
+							</IconButton>
+						</a>
+						<a
+							href="https://github.com/sarafotros"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<GitHubIcon />
+							</IconButton>
+						</a>
+						<a
+							href="https://www.instagram.com/SaraFotros.Daf/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<InstagramIcon />
+							</IconButton>
+						</a>
+						<a
+							href="https://www.youtube.com/watch?v=AHcE8SGM_M8&list=OLAK5uy_kC3NsTvd2GuE3Xrupxcf0-lWwAv0Na06I"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<YouTubeIcon />
+							</IconButton>
+						</a>
 					</div>
 				</Grid>
 			</div>
