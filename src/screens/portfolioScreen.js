@@ -7,7 +7,9 @@ import Portfo from '../components/portfo';
  import PhotoPor from '../assets/images/sfJob.jpg';
  import PhotoPor2 from '../assets/images/sara-fotros-daf.jpg';
  import PhotoPor3 from '../assets/images/scr2.png';
-
+import Handyimg from '../assets/images/handy1.png';
+import DeveloopImg from '../assets/images/develoop.png';
+import ManaWeb from '../assets/images/manaweb.png'
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,43 +34,43 @@ export default function PortfolioScreen() {
 				id: 1,
 				title: 'Handy App',
 				desc: 'React Js',
-                image: PhotoPor,
-                href:"https://handy-app.netlify.app/"
+				image: Handyimg,
+				href: 'https://handy-app.netlify.app/',
 			},
 			{
 				id: 2,
 				title: 'Mana Website',
 				desc: 'React Js',
-                image: PhotoPor2,
-                href:"https://handy-app.netlify.app/"
+				image: ManaWeb,
+				href: 'https://handy-app.netlify.app/',
 			},
 			{
 				id: 3,
 				title: 'DeveLooper',
 				desc: 'JavaScript',
-                image: PhotoPor3,
-                href:"https://handy-app.netlify.app/"
+				image: DeveloopImg,
+				href: 'https://vimeo.com/manage/402903491/general',
 			},
 			{
 				id: 4,
-				title: 'Handy App',
+				title: 'Fast Timetable',
 				desc: 'React Js',
-                image: PhotoPor,
-                href:"https://handy-app.netlify.app/"
+				image: PhotoPor,
+				href: 'https://fast-timetable.netlify.app/',
 			},
 			{
 				id: 5,
 				title: 'Handy App',
 				desc: 'React Js',
-                image: PhotoPor,
-                href:"https://handy-app.netlify.app/"
+				image: PhotoPor2,
+				href: 'https://handy-app.netlify.app/',
 			},
 			{
 				id: 6,
 				title: 'Handy App',
 				desc: 'React Js',
-                image: PhotoPor,
-                href:"https://handy-app.netlify.app/"
+				image: PhotoPor3,
+				href: 'https://handy-app.netlify.app/',
 			},
 		];
 
