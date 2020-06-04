@@ -124,7 +124,7 @@ export default function AboutScreen() {
 						</Typography>
 						<div style={{ display: 'flex', marginTop: 40 }}>
 							<Button variant="contained" color="primary" component='a'
-							href={my_resume}>
+							href={my_resume} target='_blank' >
 								{translate.downloadcv}
 							</Button>
 						</div>
