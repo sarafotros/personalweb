@@ -28,7 +28,7 @@ export default {
 	webdevelop: 'Web Development',
 	mobileapp: 'Mobile Application',
 	descdesgin:
-		'Implementing user interfaces with React, React Router, and Material UI, CSS, JSS, and Bootstrap for styling',
+		'Implementing user interfaces with React, React Router, and Material UI, CSS, JSS, and Bootstrap for styling. Creating responsive websites',
 	descwebdev:
 		'Building RESTFUL APIs with Ruby on Rails, with Postgres database. implementing MVC structure to separate concerns and facilitate the development',
 	descmobApp:
