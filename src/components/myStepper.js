@@ -111,7 +111,7 @@ export default function MyStepper({steps}) {
 
 									<div style={{flex:1}}>
 										<Typography variant="h6" className={classes.subtitleStep}>
-											{step.content}
+											{step.subtitle}
 										</Typography>
 										<Typography variant="body1">{step.content}</Typography>
 									</div>

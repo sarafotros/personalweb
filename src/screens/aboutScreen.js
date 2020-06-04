@@ -135,15 +135,15 @@ export default function AboutScreen() {
 			<Grid className={classes.aboutGrid} item container xs={12}>
 				<Title title={translate.services} />
 				<Grid container direction="row" className={classes.mainAbout}>
-                    <Service
-                        icon={<ColorLensIcon className={classes.iconStyle} />}
-                        title={translate.webdesign}
-						description={translate.descdesgin}
-					/>
 					<Service
 						icon={<CodeIcon className={classes.iconStyle} />}
 						title={translate.webdevelop}
 						description={translate.descwebdev}
+					/>
+                    <Service
+                        icon={<ColorLensIcon className={classes.iconStyle} />}
+                        title={translate.webdesign}
+						description={translate.descdesgin}
 					/>
 					<Service
 						icon={<PhoneIcon className={classes.iconStyle} />}
