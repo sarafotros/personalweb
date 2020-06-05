@@ -10,6 +10,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import EmailIcon from '@material-ui/icons/MailOutline';
 import MusicNotIcon from '@material-ui/icons/MusicNote';
+import RssFeedIcon from '@material-ui/icons/RssFeed';
+
 import { getTranslate} from '../localization/index'
  
 
@@ -79,6 +81,15 @@ export default function HomeScreen() {
 						>
 							<IconButton color="secondary" className={classes.iconButtonStyle}>
 								<GitHubIcon />
+							</IconButton>
+						</a>
+						<a
+							href="https://medium.com/@sarafotros"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconButton color="secondary" className={classes.iconButtonStyle}>
+								<RssFeedIcon />
 							</IconButton>
 						</a>
 						<a
