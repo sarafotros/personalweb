@@ -70,7 +70,7 @@ export default function Portfo({image, title, desc, href}) {
             </Grid>
             <Modal className={classes.modal} open={open} onClose={()=> setOpen(false)}>
 				<img className={classes.modalImage} src={image} alt={title} />
-        </Modal>
+       		 </Modal>
         </>
 		);
 }

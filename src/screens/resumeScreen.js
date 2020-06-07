@@ -12,6 +12,9 @@ import MyStepper from '../components/myStepper'
 const useStyles = makeStyles((theme) => ({
 	root: {
 		minHeight: '100vh',
+		paddingTop:60,
+		paddingLeft: 20,
+		paddingBottom: 20,
 	},
 	skillGrid: {
 		paddingTop: 60,

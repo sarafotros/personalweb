@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#191d2b',
 		border: '1px solid #2e344e',
 		borderTop: '5px solid #2e344e',
+		minHeight: 340,
 		padding: theme.spacing(8),
 		transition: '.4s',
 		'&:hover': {

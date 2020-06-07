@@ -14,8 +14,8 @@ import my_resume from '../assets/images/Resume.pdf'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		minHeight: '100vh',
-	},
+	 	  minHeight: '100vh',
+    },
 	aboutGrid: {
 		paddingTop: 60,
 		paddingRight: 20,
@@ -26,10 +26,6 @@ const useStyles = makeStyles((theme) => ({
 		width: '100%',
 		height: '100%',
 	},
-	// imageGrid: {
-	//    width: '90%',
-	//    height: '90%',
-	// },
 	mainAbout: {
 		paddingLeft: theme.spacing(4),
 		paddingRight: theme.spacing(4),

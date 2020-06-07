@@ -10,12 +10,12 @@ import Portfo from '../components/portfo';
 import Handyimg from '../assets/images/handy1.png';
 import DeveloopImg from '../assets/images/develoop.png';
 import ManaWeb from '../assets/images/manaweb.png'
-
+// import MyLoader from '../components/MyLoader';
 
 const useStyles = makeStyles(theme => ({
     root: {
         minHeight: '100vh',
-        padding: 30,
+        padding: 20,
         paddingTop: 60,
         width: '100%',
         [theme.breakpoints.down('xs')]: {
@@ -62,14 +62,14 @@ export default function PortfolioScreen() {
 				id: 5,
 				title: 'Handy App',
 				desc: 'React Js',
-				image: PhotoPor2,
+				image: PhotoPor,
 				href: 'https://handy-app.netlify.app/',
 			},
 			{
 				id: 6,
 				title: 'Handy App',
 				desc: 'React Js',
-				image: PhotoPor3,
+				image: PhotoPor,
 				href: 'https://handy-app.netlify.app/',
 			},
 		];
