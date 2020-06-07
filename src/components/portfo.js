@@ -15,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
 		width: '100%',
 		height: '100%',
 		cursor: 'pointer',
+		opacity: 0,
+		transition: 'opacity 0.3s ease-in-out'
 		// '&:hover': {
 		// 	transform: 'rotate(360deg)',
 		// 	transition: '1s',
@@ -55,10 +57,18 @@ const useStyles = makeStyles((theme) => ({
 export default function Portfo({image, title, desc, href}) {
     const classes = useStyles()
     const [open, setOpen]= useState(false)
+	const [imgLoaded, setImgLoaded]= useState(false)
+
+	const onImgLoaded = event => {
+      event.target.style.opacity = 1;
+	  setImgLoaded(true)
+    }
+
     return (
         <>
 			<Grid item lg={4} className={classes.root}>
-				<img onClick={()=> setOpen(true)} className={classes.image} src={image} alt={title} /> 
+				{!imgLoaded && <MyLoader/> }
+				 <img onClick={()=> setOpen(true)} className={classes.image} src={image} alt={title}  onLoad={onImgLoaded}/> 
 				<Typography variant="h5" className={classes.title}>
 					<a
 						href={href}
