@@ -6,6 +6,8 @@ import IndexScreen from './screens/index'
 import { create } from 'jss';
 import rtl from 'jss-rtl';
 import { getDirection} from './localization/index'
+import {  BrowserRouter } from 'react-router-dom';
+
 
 // Configure JSS
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
@@ -15,14 +17,18 @@ function App() {
     <ThemeProvider theme={theme}>
       <StylesProvider>
         <CssBaseline />
+        <BrowserRouter>
         <IndexScreen/>
+        </BrowserRouter>
       </StylesProvider>
     </ThemeProvider>
   ):(
     <ThemeProvider theme={theme}>
       <StylesProvider jss={jss}>
         <CssBaseline />
+        <BrowserRouter>
         <IndexScreen/>
+        </BrowserRouter>
       </StylesProvider>
     </ThemeProvider>
   )

@@ -16,4 +16,4 @@ const MyLoader = (props) => (
   </ContentLoader>
 )
 
-export default MyLoader
+export default MyLoader;

@@ -10,7 +10,6 @@ import Portfo from '../components/portfo';
 import Handyimg from '../assets/images/handy1.png';
 import DeveloopImg from '../assets/images/develoop.png';
 import ManaWeb from '../assets/images/manaweb.png'
-// import MyLoader from '../components/MyLoader';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -34,7 +33,7 @@ export default function PortfolioScreen() {
 				id: 1,
 				title: 'Handy App',
 				desc: 'React Js',
-				image: Handyimg,
+				image: 'https://sarafotros.netlify.app/static/media/handy1.7e6e6f30.png',
 				href: 'https://handy-app.netlify.app/',
 			},
 			{
@@ -91,6 +90,7 @@ export default function PortfolioScreen() {
 							title={p.title}
 							desc={p.desc}
                             image={p.image}
+                            // image={MyLoader}
                             href={p.href}
 						/>
 					))}

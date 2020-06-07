@@ -4,7 +4,7 @@
     background-color: rgba(3,127,255,.2);
     position: absolute;
 }
-.listItem:hover .overlay{
+/* .listItem:hover .overlay{
  width: 100%;
  transition: 0.8s;
 }
@@ -12,7 +12,7 @@
 .listItem:hover .listItemText{
     color: #007bff!important;
     transition: 0.8s;
-}
+} */
 .line1 {
     width: 1px;
     min-height: 100%;

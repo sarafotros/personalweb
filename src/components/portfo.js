@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Modal } from '@material-ui/core';
+import MyLoader from '../components/MyLoader';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	image: {
 		width: '100%',
+		height: '100%',
 		cursor: 'pointer',
 		// '&:hover': {
 		// 	transform: 'rotate(360deg)',
@@ -56,7 +58,7 @@ export default function Portfo({image, title, desc, href}) {
     return (
         <>
 			<Grid item lg={4} className={classes.root}>
-				<img onClick={()=> setOpen(true)} className={classes.image} src={image} alt={title} />
+				<img onClick={()=> setOpen(true)} className={classes.image} src={image} alt={title} /> 
 				<Typography variant="h5" className={classes.title}>
 					<a
 						href={href}

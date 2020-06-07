@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import { Route, BrowserRouter ,Switch , NavLink} from 'react-router-dom';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
@@ -87,13 +89,31 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
+	
+	listItem:{
+	  '&:hover .overlay':{
+		  width: '100%',
+		  transition: '0.8s',
+		},
+	  '&:hover .listItemText':{
+			color: '#007bff',
+			transition: '0.8s',
+		},
+	  },
+	activeListItem:{
+		'& *':{
+		 color: '#FFF',
+		},
+		'&:hover *':{
+		 color: '#FFF!important',	
+		},
+	}
 }));
 
 function ResponsiveDrawer(props) {
 	const { window } = props;
 	const classes = useStyles();
 	const [mobileOpen, setMobileOpen] = React.useState(false);
-	const [page, setPage] = useState(0)
 	const translate = getTranslate();
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
@@ -111,24 +131,32 @@ function ResponsiveDrawer(props) {
 			<div className={classes.centerDrawer}>
 				<List style={{ width: '100%' }}>
 					<ListItem
-						className={page === 0 ? null : 'listItem'}
+						component={NavLink}
+						exact
+						to='/'
+						activeStyle={{
+							backgroundColor:  '#037fff' ,
+							}}
+						
+						className={classes.listItem}
+						activeClassName={classes.activeListItem}
 						style={{
-							backgroundColor: page === 0 ? '#037fff' : 'transparent',
+							backgroundColor:  'transparent' ,
 							paddingLeft: 0,
 							paddingRight: 0,
 						}}
 						onClick={() => {
-							setPage(0);
 							setMobileOpen(false);
 						}}
 						button
 					>
 						<ListItemText
+						
 							disableTypography={true}
 							children={
 								<Typography
 									className="listItemText"
-									style={{ color: page === 0 ? '#FFF' : '#a4acc4' }}
+									// style={{ color: page === 0 ? '#FFF' : '#a4acc4' }}
 									variant="body2"
 								>
 									{translate.home}
@@ -137,15 +165,23 @@ function ResponsiveDrawer(props) {
 						/>
 						<div className="overlay" />
 					</ListItem>
+
 					<ListItem
-						className={page === 1 ? null : 'listItem'}
+					    component={NavLink}
+						to='/about'
+						activeStyle={{
+							backgroundColor:  '#037fff' ,
+						}}
+						
+						className={classes.listItem}
+						activeClassName={classes.activeListItem}
+
 						style={{
-							backgroundColor: page === 1 ? '#037fff' : 'transparent',
+							backgroundColor: 'transparent',
 							paddingLeft: 0,
 							paddingRight: 0,
 						}}
 						onClick={() => {
-							setPage(1);
 							setMobileOpen(false);
 						}}
 						button
@@ -155,7 +191,7 @@ function ResponsiveDrawer(props) {
 							children={
 								<Typography
 									className="listItemText"
-									style={{ color: page === 1 ? '#FFF' : '#a4acc4' }}
+									// style={{ color: page === 1 ? '#FFF' : '#a4acc4' }}
 									variant="body2"
 								>
 									{translate.about}
@@ -164,15 +200,23 @@ function ResponsiveDrawer(props) {
 						/>
 						<div className="overlay" />
 					</ListItem>
+
 					<ListItem
-						className={page === 2 ? null : 'listItem'}
+					component={NavLink}
+						to='/resume'
+						
+						className={classes.listItem}
+						activeClassName={classes.activeListItem}
+
+						activeStyle={{
+							backgroundColor:  '#037fff' ,
+							}}
 						style={{
-							backgroundColor: page === 2 ? '#037fff' : 'transparent',
+							backgroundColor:'transparent',
 							paddingLeft: 0,
 							paddingRight: 0,
 						}}
 						onClick={() => {
-							setPage(2);
 							setMobileOpen(false);
 						}}
 						button
@@ -182,7 +226,7 @@ function ResponsiveDrawer(props) {
 							children={
 								<Typography
 									className="listItemText"
-									style={{ color: page === 2 ? '#FFF' : '#a4acc4' }}
+									// style={{ color: page === 2 ? '#FFF' : '#a4acc4' }}
 									variant="body2"
 								>
 									{translate.resume}
@@ -191,15 +235,22 @@ function ResponsiveDrawer(props) {
 						/>
 						<div className="overlay" />
 					</ListItem>
+
 					<ListItem
-						className={page === 3 ? null : 'listItem'}
+					component={NavLink}
+						to='/portfo'
+						className={classes.listItem}
+						activeClassName={classes.activeListItem}
+
+						activeStyle={{
+							backgroundColor:  '#037fff' ,
+							}}
 						style={{
-							backgroundColor: page === 3 ? '#037fff' : 'transparent',
+							backgroundColor: 'transparent',
 							paddingLeft: 0,
 							paddingRight: 0,
 						}}
 						onClick={() => {
-							setPage(3);
 							setMobileOpen(false);
 						}}
 						button
@@ -209,7 +260,7 @@ function ResponsiveDrawer(props) {
 							children={
 								<Typography
 									className="listItemText"
-									style={{ color: page === 3 ? '#FFF' : '#a4acc4' }}
+									// style={{ color: page === 3 ? '#FFF' : '#a4acc4' }}
 									variant="body2"
 								>
 									{translate.portfolio}
@@ -218,15 +269,22 @@ function ResponsiveDrawer(props) {
 						/>
 						<div className="overlay" />
 					</ListItem>
+
 					<ListItem
-						className={page === 4 ? null : 'listItem'}
+					component={NavLink}
+						to='/contact'
+						className={classes.listItem}
+						activeClassName={classes.activeListItem}
+
+						activeStyle={{
+							backgroundColor:  '#037fff' ,
+							}}
 						style={{
-							backgroundColor: page === 4 ? '#037fff' : 'transparent',
+							backgroundColor:  'transparent',
 							paddingLeft: 0,
 							paddingRight: 0,
 						}}
 						onClick={() => {
-							setPage(4);
 							setMobileOpen(false);
 						}}
 						button
@@ -236,7 +294,7 @@ function ResponsiveDrawer(props) {
 							children={
 								<Typography
 									className="listItemText"
-									style={{ color: page === 4 ? '#FFF' : '#a4acc4' }}
+									// style={{ color: page === 4 ? '#FFF' : '#a4acc4' }}
 									variant="body2"
 								>
 									{translate.contact}
@@ -270,20 +328,31 @@ function ResponsiveDrawer(props) {
 		window !== undefined ? () => window().document.body : undefined;
 
 	const getPage = () => {
-		switch (page) {
-			case 0:
-				return <HomeScreen />;
-			case 1:
-				return <AboutScreen />;
-			case 2:
-				return <ResumeScreen />;
-			case 3:
-				return <PortfolioScreen />;
-			case 4:
-				return <ContactScreen />;
-			default:
-				return <HomeScreen/>
-		}
+		// switch (page) {
+		// 	case 0:
+		// 		return <HomeScreen />;
+		// 	case 1:
+		// 		return <AboutScreen />;
+		// 	case 2:
+		// 		return <ResumeScreen />;
+		// 	case 3:
+		// 		return <PortfolioScreen />;
+		// 	case 4:
+		// 		return <ContactScreen />;
+		// 	default:
+		// 		return <HomeScreen/>
+		// }
+
+		return (
+			  <Switch>
+				<Route exact path='/about'> <AboutScreen/> </Route>
+				<Route exact path='/resume'> <ResumeScreen /> </Route>
+				<Route path='/portfo'> <PortfolioScreen/> </Route>
+				<Route path='/contact'> <ContactScreen/> </Route>
+				<Route path='/' > <HomeScreen /> </Route>
+			  </Switch>
+	   )
+		
 	}
 	
 	return (
@@ -299,7 +368,7 @@ function ResponsiveDrawer(props) {
 				<MenuIcon />
 			</IconButton>
 			<nav className={classes.drawer} aria-label="mailbox folders">
-				{/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+				{/* The implementation can be swapped with js to avoid SEO duplication of Navlinks. */}
 				<Hidden smUp implementation="css">
 					<Drawer
 						container={container}
