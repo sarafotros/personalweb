@@ -22,7 +22,7 @@ export default {
 	uk: 'انگلستان، لندن',
 	js: 'Ruby, Rails, JavaScript, React',
 	eng: 'فارسی و انگلیسی ',
-	available: 'Available',
+	available: 'پذیرفته میشود',
 	downloadcv: ' دانلود رزومه ',
 	webdesign: ' طراحی وب‌سایت ',
 	webdevelop: ' کدنویسی و توسعه وب ',
