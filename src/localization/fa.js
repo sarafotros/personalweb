@@ -115,7 +115,7 @@ export default {
 	educationalQualification: ' سوابق تحصیلی ',
 	contactme: '  اطلاعات تماس ',
 	getintouch: ' ارسال پیام به من ',
-	enterYourName: 'نام را وارد کنیم',
+	enterYourName: 'نام خود را وارد کنید',
 	enterYourEmail: ' ایمیل را وارد کنید',
 	enterYourSubject: ' موضوع پیام را وارد کنید',
 	enterYourMessage: ' پیام را وارد کنید',
